@@ -39,9 +39,9 @@ public class Main {
         System.out.print("Masukkan jumlah tiket yang akan dipesan: ");
         int jumlahTiket = scanner.nextInt();
 
-        Pemesanan pemesanan = new Pemesanan(new Date(), jumlahTiket);
+        Pesanan pesanan = new Pesanan(new Date(), jumlahTiket   );
 
-        // Pengguna memesan tiket
-        pemesanan.pesanTiket(pembeli, konser, jenisTiketPilihan);
+    // Pengguna memesan tiket
+        pesanan.pesanTiket(pembeli, konser, jenisTiketPilihan);
     }
 }

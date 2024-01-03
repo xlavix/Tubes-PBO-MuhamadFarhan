@@ -30,9 +30,10 @@ public class Konser {
 
     private void initializeJenisTiket() {
         // Menambahkan jenis tiket dan harga
-        jenisTiket.put("VIP", 1300000.0);
-        jenisTiket.put("Regular", 800000.0);
-        jenisTiket.put("Student", 500000.0);
+        jenisTiket.put("ROSE", 1300000.0);
+        jenisTiket.put("ORCHID", 750000.0);
+        jenisTiket.put("TULIP", 600000.0);
+        jenisTiket.put("JASMINE", 350000.0);
     }
 
     public Map<String, Double> getJenisTiket() {

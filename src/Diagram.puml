@@ -1,0 +1,43 @@
+@startuml
+
+class Pembeli {
+    -namaPembeli: String
+    -email: String
+
+    +Pembeli(namaPembeli: String, email: String)
+    +getNamaPembeli(): String
+    +getEmail(): String
+}
+
+class Konser {
+    -namaKonser: String
+    -tanggal: String
+    -lokasi: String
+    -jenisTiket: Map<String, Double>
+
+    +Konser()
+    +getNamaKonser(): String
+    +getTanggal(): String
+    +getLokasi(): String
+    +initializeJenisTiket(): void
+    +getJenisTiket(): Map<String, Double>
+}
+
+class Pemesanan {
+    -tanggalPemesanan: Date
+    -jumlahTiket: int
+    -totalHarga: double
+
+    +Pemesanan(tanggalPemesanan: Date, jumlahTiket: int)
+}
+
+class Pesanan {
+    +Pesanan(tanggalPemesanan: Date, jumlahTiket: int)
+    +pesanTiket(Pembeli: Pembeli, konser: Konser, jenisTiketPilihan: String): void
+}
+
+Pembeli --|> Pemesanan
+Konser --|> Pemesanan
+Pesanan --|> Pemesanan
+
+@enduml
